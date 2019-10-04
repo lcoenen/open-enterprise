@@ -60,10 +60,10 @@ const Budget = ({
             </ContextMenuItem>
           </ContextMenu>
         </MenuContainer>
-        <CardTitle color={`${theme.content}`}>{name}</CardTitle>
+        <CardTitle color={theme.content}>{name}</CardTitle>
         <StatsContainer>
           <StyledStats>
-            <StatsValueBig color={`${theme.contentSecondary}`}>
+            <StatsValueBig color={theme.contentSecondary}>
               <Text>Inactive</Text>
             </StatsValueBig>
           </StyledStats>
@@ -90,15 +90,15 @@ const Budget = ({
           </ContextMenuItem>
         </ContextMenu>
       </MenuContainer>
-      <CardTitle color={`${theme.content}`}>{name}</CardTitle>
+      <CardTitle color={theme.content}>{name}</CardTitle>
       <StatsContainer>
         <StyledStats>
-          <StatsValueBig color={`${theme.contentSecondary}`}>
-            <Text>{`${amount} ${token} per period`}</Text>
+          <StatsValueBig color={theme.contentSecondary}>
+            <Text>{amount} {token} per period</Text>
           </StatsValueBig>
           <StatsValueBig css={{ paddingTop: '24px' }}>
             <ProgressBar
-              color={`${theme.accentEnd}`}
+              color={theme.accentEnd}
               value={allocated}
             />
           </StatsValueBig>
@@ -109,7 +109,7 @@ const Budget = ({
             }}
           >
             
-            <Text>{`${amount} ${token} below limit`}</Text>
+            <Text>{amount} {token} below limit</Text>
           </StatsValueSmall>
           <StatsValueSmall
             css={{
@@ -117,7 +117,7 @@ const Budget = ({
               paddingTop: '4px',
             }}
           >
-            <Text>{`${amount}% remaining`}</Text>
+            <Text>{amount}% remaining</Text>
           </StatsValueSmall>
         </StyledStats>
       </StatsContainer>
